@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra
+
+      - name: Generate PDF
+        run: |
+          pandoc requirements.md \
+            --toc \
+            --number-sections \
+            -o requirements-E-store.pdf
+
+      - name: Generate HTML
+        run: |
+          pandoc requirements.md \
+            --toc \
+            --number-sections \
+            -o requirements-E-store.html
+
+      - name: Upload generated files as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: requirements-docs
+          path: |
+            requirements-E-store.pdf
+            requirements-E-store.html
