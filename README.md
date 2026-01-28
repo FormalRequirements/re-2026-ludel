@@ -117,5 +117,5 @@ a deliverable easily accessible by instructors via GitHub Releases
 
 ## Authors
 
-- [ABDEL ISSAKHA](https://github.com/Abdel4353).
+- [ABDEL-AZIZ ISSAKHA](https://github.com/Abdel4353).
 - [BELLA NGUEMA Luce](https://github.com/Luce58).
