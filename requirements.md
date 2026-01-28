@@ -183,9 +183,6 @@ The system shall ensure a seamless user experience through:
 * **G.7.5 Payment Provider:** Source of banking security constraints.
 * **G.7.6 GDPR:** Source of legal constraints regarding data privacy.
 
----
-
-## 🏗 Book P: PROJECT
 
 ### P.1 Roles and Personnel
 * **Luce:** Angular (Frontend) and Java Spring Boot (Backend) development.
@@ -205,9 +202,6 @@ The system shall ensure a seamless user experience through:
 | **D+14** | M3: Checkout | Payment & Security | Payment gateway integration and "Sandbox" testing. |
 | **D+25** | M4: CI/CD | Cloud Deployment | Production Go-Live on AWS with GitHub Actions pipeline. |
 
-
-
-[Image of a software development project Gantt chart]
 
 ### P.4 Tasks and Deliverables
 * **Task:** Catalog Module (Filters/Search). -> **Deliverable:** Frontend source code.
