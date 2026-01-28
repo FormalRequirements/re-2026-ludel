@@ -36,14 +36,12 @@ jobs:
         run: |
           pandoc requirements.md \
             --toc \
-            --number-sections \
             -o requirements-E-store.pdf
 
       - name: Generate HTML
         run: |
           pandoc requirements.md \
             --toc \
-            --number-sections \
             -o requirements-E-store.html
 
       - name: Upload generated files as artifacts
