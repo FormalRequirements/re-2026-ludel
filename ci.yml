@@ -1,0 +1,46 @@
+name: Generate Requirements PDF and HTML
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-latex-extra
+
+      - name: Generate PDF from Markdown
+        run: |
+          pandoc docs/requirements.md \
+            --toc \
+            --number-sections \
+            -o requirements-E-store.pdf
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: requirements-E-store-pdf
+          path: requirements-E-store.pdf
+
+      - name: Generate HTML from Markdown
+        run: |
+          pandoc docs/requirements.md \
+            --toc \
+            --number-sections \
+            -o requirements-E-store.html
+
+      - name: Upload HTML as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: requirements-E-store-html
+          path: requirements-E-store.html
