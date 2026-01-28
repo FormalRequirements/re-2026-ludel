@@ -6,35 +6,35 @@
 
 ### Actors
 
-**E1.1 – Client**: A person who owns a customer account on the e-store and is able to browse products and make online purchases.
+**E1.1 – Client**: A person who owns a customer account on the e-store and is able to browse products and make online purchases.  
 **E1.2 – Administrator**: A person responsible for managing the e-store, including product catalog, stock levels, orders, and system configuration.
 
 ---
 
 ### Business Objects (Products and Documents)
 
-**E1.2 – Product**: A generic item offered for sale on the e-store.  
-**E1.3 – Sports equipment**: A specific type of product intended for practicing or assisting a sports activity.
-**E1.4 – Order**: A set of products selected by a client with the intention of purchasing.  
-**E1.5 – Invoice**: An electronic document summarizing the details of a completed sale, including products, prices, date, and client information.
+**E1.3 – Product**: A generic item offered for sale on the e-store.  
+**E1.4 – Sports equipment**: A specific type of product intended for practicing or assisting a sports activity.  
+**E1.5 – Order**: A set of products selected by a client with the intention of purchasing.  
+**E1.6 – Invoice**: An electronic document summarizing the details of a completed sale, including products, prices, date, and client information.
 
 ---
 
 ### Business Processes
 
-**E1.6 – Sale**: A commercial process corresponding to the validation and successful payment of an order.  
-**E1.7 – Payment**: A process allowing the client to pay for an order using secure payment methods.  
-**E1.8 – Delivery**: A process by which ordered products are delivered to a location chosen by the client.  
-**E1.9 – Order cancellation**: An action allowing the client to remove all or part of the products from an order before final validation.
+**E1.7 – Sale**: A commercial process corresponding to the validation and successful payment of an order.  
+**E1.8 – Payment**: A process allowing the client to pay for an order using secure payment methods.  
+**E1.9 – Delivery**: A process by which ordered products are delivered to a location chosen by the client.  
+**E1.10 – Order cancellation**: An action allowing the client to remove all or part of the products from an order before final validation.
 
 ---
 
 ### System Elements
 
-**E1.10 – E-store**: A virtual store allowing the online sale of goods or services via the Internet.  
-**E1.11 – Customer account**: A personal system space allowing a client to authenticate, place orders, and consult order and invoice history.  
-**E1.12 – Login**: The action allowing a client to access their customer account using identifiers.  
-**E1.13 – Authentication**: The system process of verifying the client’s identity during login.
+**E1.11 – E-store**: A virtual store allowing the online sale of goods or services via the Internet.  
+**E1.12 – Customer account**: A personal system space allowing a client to authenticate, place orders, and consult order and invoice history.  
+**E1.13 – Login**: The action allowing a client to access their customer account using identifiers.  
+**E1.14 – Authentication**: The system process of verifying the client’s identity during login.
 
 ---
 
