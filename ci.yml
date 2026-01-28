@@ -1,4 +1,4 @@
-name: Generate Requirements PDF and HTML
+name: Generate Requirements Files PDF and HTML
 
 on:
   push:
