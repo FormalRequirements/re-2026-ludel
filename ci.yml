@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate PDF from Markdown
         run: |
-          pandoc docs/requirements.md \
+          pandoc requirements.md \
             --toc \
             --number-sections \
             -o requirements-E-store.pdf
@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate HTML from Markdown
         run: |
-          pandoc docs/requirements.md \
+          pandoc requirements.md \
             --toc \
             --number-sections \
             -o requirements-E-store.html
