@@ -19,28 +19,26 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-latex-extra
 
-      - name: Generate PDF from Markdown
+      - name: Generate PDF
         run: |
           pandoc requirements.md \
             --toc \
             --number-sections \
             -o requirements-E-store.pdf
 
-      - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: requirements-E-store-pdf
-          path: requirements-E-store.pdf
-
-      - name: Generate HTML from Markdown
+      - name: Generate HTML
         run: |
           pandoc requirements.md \
             --toc \
             --number-sections \
             -o requirements-E-store.html
 
-      - name: Upload HTML as artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload PDF to Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: requirements-E-store-html
-          path: requirements-E-store.html
+          files: requirements-E-store.pdf
+
+      - name: Upload HTML to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: requirements-E-store.html
