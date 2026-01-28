@@ -139,3 +139,83 @@
 ## E.7 – Customer account deletion
 
 **E7.1** – Deleting a customer account results in the deletion or anonymization of personal data, except for information retained for legal purposes (invoices and sales history).
+
+### G.1 Overall Context
+The E-store project aims to design a robust software solution for online sports equipment sales. The goal is to capture a market of demanding athletes by offering a platform capable of supporting high traffic and heavy loads.
+
+### G.2 Current Situation
+Currently, customers must visit physical stores. There is a lack of centralized online platforms for specialized sports equipment with reliable real-time inventory tracking.
+
+### G.3 Expected Benefits
+* **Inventory Range:** Showcase over 500 technical product references.
+* **Concurrency:** Support hundreds of simultaneous orders.
+* **Automation:** Reduce human errors in order entry.
+* **Speed:** Instant payment processing and notifications.
+
+### G.4 Functionality Overview
+The system shall ensure a seamless user experience through:
+* Navigation by sports discipline (Bodybuilding, Fitness, Football, etc.).
+* Advanced search (weight, brand, size).
+* Cart management (Add/Edit/Remove) including guest mode.
+* Secure checkout funnel (Registration/Login mandatory for payment).
+* Profile management and order history tracking.
+
+
+
+### G.5 High-level Usage Scenarios
+* **G.5.1 Targeted Purchase:** A user searches for "10kg Dumbbells", filters by brand, and completes the purchase immediately.
+* **G.5.2 Account Management:** A customer updates their shipping address following a relocation.
+* **G.5.3 Product Consultation:** A user compares the technical specifications of two treadmills.
+* **G.5.4 Admin Tracking:** The Director (PO) reviews weekly sales statistics.
+
+### G.6 Limitations and Exclusions
+* **G.6.1:** No second-hand or used product sales.
+* **G.6.2:** Delivery is restricted to Mainland France and Belgium only.
+* **G.6.3:** No integrated video coaching programs (V1).
+* **G.6.4:** No payments via check or cryptocurrency.
+* **G.6.5:** Product returns are not handled automatically via the UI (Manual Customer Support).
+
+### G.7 Stakeholders and Requirements Sources
+* **G.7.1 Customers:** Amateur and pro athletes (Usability requirements).
+* **G.7.2 Product Owner:** Store Manager (Profitability requirements).
+* **G.7.3 Luce (Fullstack):** Source of Java/Angular technical constraints.
+* **G.7.4 Abdel (DevOps):** Source of deployment and CI/CD requirements.
+* **G.7.5 Payment Provider:** Source of banking security constraints.
+* **G.7.6 GDPR:** Source of legal constraints regarding data privacy.
+
+
+### P.1 Roles and Personnel
+* **Luce:** Angular (Frontend) and Java Spring Boot (Backend) development.
+* **Abdel:** AWS Architecture, CI/CD Pipeline, and Validation Testing.
+* **Product Owner:** Store Director (Deliverable validation).
+
+### P.2 Imposed Technical Choices
+* **Stacks:** Angular (Frontend), Java (Backend), PostgreSQL (Database).
+* **Professional Tools:** Jira (Ticketing), GitHub (Code), AWS (Cloud).
+
+
+### P.3 Schedule, Milestones, and Key Objectives
+| Date (D+) | Mission | Phase | Key Objective |
+| :--- | :--- | :--- | :--- |
+| **D+7** | M1: Design | UI/UX Mockups | Validation of the graphic charter and checkout funnel. |
+| **D+10** | M2: Catalog | Backend Development | SQL Database import and functional search API. |
+| **D+14** | M3: Checkout | Payment & Security | Payment gateway integration and "Sandbox" testing. |
+| **D+25** | M4: CI/CD | Cloud Deployment | Production Go-Live on AWS with GitHub Actions pipeline. |
+
+
+### P.4 Tasks and Deliverables
+* **Task:** Catalog Module (Filters/Search). -> **Deliverable:** Frontend source code.
+* **Task:** Shipping calculation system. -> **Deliverable:** Tested Java API.
+* **Task:** Doc generation pipeline. -> **Deliverable:** GitHub Actions workflow.
+
+### P.5 Required Technology Elements
+* Java 17, Maven, Angular CLI, AWS EC2 Instance.
+
+### P.6 Risk and Mitigation Analysis
+* **Risk:** Server downtime. -> **Mitigation:** AWS Load Balancing implementation.
+* **Risk:** Data breach. -> **Mitigation:** SSL encryption and BCrypt hashing.
+
+### P.7 Requirements Process and Report
+* **P.7.1:** Project requirements are specified using the PEGS approach.
+* **P.7.1:** Each created tag triggers a new project version in ZIP format and generates a PDF version of the requirements.
+* **P.7.2:** The specification PDF is automatically generated.
