@@ -4,214 +4,210 @@
 
 ## E.1 – Glossary
 
-### Actors
+### E.1.1 Actors
 
-**E1.1 – Client**: A person who owns a customer account on the e-store and is able to browse products and make online purchases.  
-**E1.2 – Administrator**: A person responsible for managing the e-store, including product catalog, stock levels, orders, and system configuration.
-
----
-
-### Business Objects (Products and Documents)
-
-**E1.3 – Product**: A generic item offered for sale on the e-store.  
-**E1.4 – Sports equipment**: A specific type of product intended for practicing or assisting a sports activity.  
-**E1.5 – Order**: A set of products selected by a client with the intention of purchasing.  
-**E1.6 – Invoice**: An electronic document summarizing the details of a completed sale, including products, prices, date, and client information.
+- **E.1.1.1 – Client**: A person who owns a customer account on the e-store and is able to browse products and make online purchases.
+- **E.1.1.2 – Administrator**: A person responsible for managing the e-store, including product catalog, stock levels, orders, and system configuration.
 
 ---
 
-### Business Processes
+### E.1.2 Business Objects (Products and Documents)
 
-**E1.7 – Sale**: A commercial process corresponding to the validation and successful payment of an order.  
-**E1.8 – Payment**: A process allowing the client to pay for an order using secure payment methods.  
-**E1.9 – Delivery**: A process by which ordered products are delivered to a location chosen by the client.  
-**E1.10 – Order cancellation**: An action allowing the client to remove all or part of the products from an order before final validation.
+- **E.1.2.1 – Product**: A generic item offered for sale on the e-store.
+- **E.1.2.2 – Sports equipment**: A specific type of product intended for practicing or assisting a sports activity.
+- **E.1.2.3 – Order**: A set of products selected by a client with the intention of purchasing.
+- **E.1.2.4 – Invoice**: An electronic document summarizing the details of a completed sale.
 
 ---
 
-### System Elements
+### E.1.3 Business Processes
 
-**E1.11 – E-store**: A virtual store allowing the online sale of goods or services via the Internet.  
-**E1.12 – Customer account**: A personal system space allowing a client to authenticate, place orders, and consult order and invoice history.  
-**E1.13 – Login**: The action allowing a client to access their customer account using identifiers.  
-**E1.14 – Authentication**: The system process of verifying the client’s identity during login.
+- **E.1.3.1 – Sale**: Commercial process corresponding to order validation and successful payment.
+- **E.1.3.2 – Payment**: Process allowing the client to pay for an order using secure payment methods.
+- **E.1.3.3 – Delivery**: Process by which ordered products are delivered to a location chosen by the client.
+- **E.1.3.4 – Order cancellation**: Action allowing the client to remove all or part of the products from an order before final validation.
+
+---
+
+### E.1.4 System Elements
+
+- **E.1.4.1 – E-store**: A virtual store allowing the online sale of goods or services via the Internet.
+- **E.1.4.2 – Customer account**: A personal system space allowing a client to authenticate, place orders, and consult order and invoice history.
+- **E.1.4.3 – Login**: The action allowing a client to access their customer account using identifiers.
+- **E.1.4.4 – Authentication**: The system process of verifying the client’s identity during login.
 
 ---
 
 ## E.2 – Components
 
-### Internal Components
+### E.2.1 Internal Components
 
-**E2.1 – User Interface (UI)**: Graphical interface allowing the client to interact with the e-store (navigation, ordering, payment).  
-**E2.2 – Application server**: Component hosting the backend code and handling user requests.  
-**E2.3 – Database**: Centralized storage system for data related to clients, products, orders, and invoices.
+- **E.2.1.1 – User Interface (UI)**: Graphical interface allowing the client to interact with the e-store.
+- **E.2.1.2 – Application server**: Component hosting backend code and handling user requests.
+- **E.2.1.3 – Database**: Centralized storage system for clients, products, orders, and invoices.
 
 ---
 
-### External Components
+### E.2.2 External Components
 
-**E2.4 – External payment service**: Third-party system (bank or payment provider) responsible for validating and securing transactions.  
-**E2.5 – Email service**: External system used to send confirmation, notification, and invoice emails.  
-**E2.6 – SMS service**: External system used to send validation codes during payment.  
-**E2.7 – Web browser**: Software used by the client to access the e-store.  
-**E2.8 – Internet network**: Infrastructure enabling communication between users, external services, and the e-store system.
+- **E.2.2.1 – External payment service**: Third-party system responsible for validating and securing transactions.
+- **E.2.2.2 – Email service**: External system used to send confirmation and notification emails.
+- **E.2.2.3 – SMS service**: External system used to send payment validation codes.
+- **E.2.2.4 – Web browser**: Software used by the client to access the e-store.
+- **E.2.2.5 – Internet network**: Infrastructure enabling communication between all systems.
 
 ---
 
 ## E.3 – Constraints
 
-### Functional Constraints
+### E.3.1 Functional Constraints
 
-**E3.1** – An order payment can only be performed after a customer account has been created.  
-**E3.2** – A customer account must be created using a valid email address, a password, and a phone number.  
-**E3.3** – Out-of-stock products must be clearly indicated to the user.  
-**E3.4** – Each invoice must be accessible in the customer’s personal space.
-
----
-
-### Security Constraints
-
-**E3.5** – Customer passwords must contain at least eight characters, one uppercase letter, one lowercase letter, one digit, and one special character.  
-**E3.6** – Any payment validation must be confirmed using a confidential code sent to the customer’s phone number.
+- **E.3.1.1** – Order payment can only be performed after a customer account has been created.
+- **E.3.1.2** – A customer account must be created using a valid email address, a password, and a phone number.
+- **E.3.1.3** – Out-of-stock products must be clearly indicated to the user.
+- **E.3.1.4** – Each invoice must be accessible in the customer’s personal space.
 
 ---
 
-### Notification Constraints
+### E.3.2 Security Constraints
 
-**E3.7** – A confirmation message must be displayed on the user interface after account creation.  
-**E3.8** – A confirmation email must be sent to the customer after account creation.  
-**E3.9** – An error message must be displayed in case of account creation or payment failure.  
-**E3.10** – Any site unavailability must be notified to customers by email.
+- **E.3.2.1** – Customer passwords must follow defined complexity rules.
+- **E.3.2.2** – Any payment validation must be confirmed using a confidential code sent to the customer’s phone number.
 
 ---
 
-### Technical Constraints
+### E.3.3 Notification Constraints
 
-**E3.11** – The user interface must be developed using AngularJS.  
-**E3.12** – The backend must be developed using Spring Boot.
+- **E.3.3.1** – A confirmation message must be displayed after account creation.
+- **E.3.3.2** – A confirmation email must be sent after account creation.
+- **E.3.3.3** – An error message must be displayed in case of failure.
+- **E.3.3.4** – Any site unavailability must be notified by email.
+
+---
+
+### E.3.4 Technical Constraints
+
+- **E.3.4.1** – The user interface must be developed using Angular.
+- **E.3.4.2** – The backend must be developed using Spring Boot.
 
 ---
 
 ## E.4 – Assumptions
 
-**E4.1** – The Internet network is available and allows access to the e-store.  
-**E4.2** – External services (payment, email, SMS) are operational when required.  
-**E4.3** – Customers provide accurate and correctly formatted information.  
-**E4.4** – Customers use a web browser compatible with the application.  
-**E4.5** – Users comply with the usage rules of the e-store.
+- **E.4.1** – The Internet network is available.
+- **E.4.2** – External services are operational.
+- **E.4.3** – Customers provide accurate information.
+- **E.4.4** – Customers use a compatible web browser.
+- **E.4.5** – Users comply with e-store usage rules.
 
 ---
 
 ## E.5 – Effects on the Environment
 
-**E5.1** – Creation, modification, and deletion of customer data in the database.  
-**E5.2** – Stock updates following orders and order cancellations.  
-**E5.3** – Generation and storage of electronic invoices.  
-**E5.4** – Sending emails and notifications to customers.  
-**E5.5** – Impact on sales and commercial management processes.
+- **E.5.1** – Creation, modification, and deletion of customer data.
+- **E.5.2** – Stock updates following orders and cancellations.
+- **E.5.3** – Generation and storage of electronic invoices.
+- **E.5.4** – Sending notifications to customers.
+- **E.5.5** – Impact on commercial management processes.
 
 ---
 
 ## E.6 – Invariants
 
-**E6.1** – Each customer account is uniquely identified.  
-**E6.2** – A validated order corresponds to a confirmed payment.  
-**E6.3** – Product stock levels must never be negative.  
-**E6.4** – An issued invoice cannot be modified.  
-**E6.5** – Customer personal data must remain protected.  
-**E6.6** – Deleting a customer account results in the deletion or anonymization of personal data, except for information retained for legal purposes (invoices and sales history).
-**E6.1** – Each customer account is uniquely identified.
-
-**E6.2** – A validated order corresponds to a confirmed payment.
-
-**E6.3** – Product stock levels must never be negative.
-
-**E6.4** – An issued invoice cannot be modified.
-
-**E6.5** – Customer personal data must remain protected.
+- **E.6.1** – Each customer account is uniquely identified.
+- **E.6.2** – A validated order corresponds to a confirmed payment.
+- **E.6.3** – Product stock levels must never be negative.
+- **E.6.4** – An issued invoice cannot be modified.
+- **E.6.5** – Customer personal data must remain protected.
+- **E.6.6** – Deleting a customer account results in data deletion or anonymization, except for legal retention.
 
 ---
 
-## E.7 – Customer account deletion
+# Goals Book – E-Store
 
-**E7.1** – Deleting a customer account results in the deletion or anonymization of personal data, except for information retained for legal purposes (invoices and sales history).
+## G.1 – Context
 
-### G.1 Overall Context
-The E-store project aims to design a robust software solution for online sports equipment sales. The goal is to capture a market of demanding athletes by offering a platform capable of supporting high traffic and heavy loads.
+- **G.1.1** – Design an online sports equipment sales platform.
 
-### G.2 Current Situation
-Currently, customers must visit physical stores. There is a lack of centralized online platforms for specialized sports equipment with reliable real-time inventory tracking.
+## G.2 – Current Situation
 
-### G.3 Expected Benefits
-* **Inventory Range:** Showcase over 500 technical product references.
-* **Concurrency:** Support hundreds of simultaneous orders.
-* **Automation:** Reduce human errors in order entry.
-* **Speed:** Instant payment processing and notifications.
+- **G.2.1** – Customers rely on physical stores.
+- **G.2.2** – No specialized centralized online platform.
 
-### G.4 Functionality Overview
-The system shall ensure a seamless user experience through:
-* Navigation by sports discipline (Bodybuilding, Fitness, Football, etc.).
-* Advanced search (weight, brand, size).
-* Cart management (Add/Edit/Remove) including guest mode.
-* Secure checkout funnel (Registration/Login mandatory for payment).
-* Profile management and order history tracking.
+## G.3 – Expected Benefits
 
+- **G.3.1** – Large product inventory.
+- **G.3.2** – High concurrency support.
+- **G.3.3** – Process automation.
+- **G.3.4** – Fast payments and notifications.
 
+## G.4 – Functional Overview
 
-### G.5 High-level Usage Scenarios
-* **G.5.1 Targeted Purchase:** A user searches for "10kg Dumbbells", filters by brand, and completes the purchase immediately.
-* **G.5.2 Account Management:** A customer updates their shipping address following a relocation.
-* **G.5.3 Product Consultation:** A user compares the technical specifications of two treadmills.
-* **G.5.4 Admin Tracking:** The Director (PO) reviews weekly sales statistics.
+- **G.4.1** – Navigation by sports discipline.
+- **G.4.2** – Advanced search and filtering.
+- **G.4.3** – Cart management.
+- **G.4.4** – Secure checkout.
+- **G.4.5** – Profile and order history management.
 
-### G.6 Limitations and Exclusions
-* **G.6.1:** No second-hand or used product sales.
-* **G.6.2:** Delivery is restricted to Mainland France and Belgium only.
-* **G.6.3:** No integrated video coaching programs (V1).
-* **G.6.4:** No payments via check or cryptocurrency.
-* **G.6.5:** Product returns are not handled automatically via the UI (Manual Customer Support).
+## G.5 – Usage Scenarios
 
-### G.7 Stakeholders and Requirements Sources
-* **G.7.1 Customers:** Amateur and pro athletes (Usability requirements).
-* **G.7.2 Product Owner:** Store Manager (Profitability requirements).
-* **G.7.3 Luce (Fullstack):** Source of Java/Angular technical constraints.
-* **G.7.4 Abdel (DevOps):** Source of deployment and CI/CD requirements.
-* **G.7.5 Payment Provider:** Source of banking security constraints.
-* **G.7.6 GDPR:** Source of legal constraints regarding data privacy.
+- **G.5.1** – Targeted purchase.
+- **G.5.2** – Account update.
+- **G.5.3** – Product comparison.
+- **G.5.4** – Sales monitoring by admin.
 
+## G.6 – Limitations
 
-### P.1 Roles and Personnel
-* **Luce:** Angular (Frontend) and Java Spring Boot (Backend) development.
-* **Abdel:** AWS Architecture, CI/CD Pipeline, and Validation Testing.
-* **Product Owner:** Store Director (Deliverable validation).
+- **G.6.1** – No second-hand products.
+- **G.6.2** – Limited delivery area.
+- **G.6.3** – No video coaching (V1).
+- **G.6.4** – Restricted payment methods.
+- **G.6.5** – Manual product returns.
 
-### P.2 Imposed Technical Choices
-* **Stacks:** Angular (Frontend), Java (Backend), PostgreSQL (Database).
-* **Professional Tools:** Jira (Ticketing), GitHub (Code), AWS (Cloud).
+## G.7 – Stakeholders
 
+- **G.7.1** – Customers.
+- **G.7.2** – Product Owner.
+- **G.7.3** – Development team.
+- **G.7.4** – DevOps.
+- **G.7.5** – Payment provider.
+- **G.7.6** – GDPR authority.
 
-### P.3 Schedule, Milestones, and Key Objectives
-| Date (D+) | Mission | Phase | Key Objective |
-| :--- | :--- | :--- | :--- |
-| **D+7** | M1: Design | UI/UX Mockups | Validation of the graphic charter and checkout funnel. |
-| **D+10** | M2: Catalog | Backend Development | SQL Database import and functional search API. |
-| **D+14** | M3: Checkout | Payment & Security | Payment gateway integration and "Sandbox" testing. |
-| **D+25** | M4: CI/CD | Cloud Deployment | Production Go-Live on AWS with GitHub Actions pipeline. |
+---
 
+# Project Book – E-Store
 
-### P.4 Tasks and Deliverables
-* **Task:** Catalog Module (Filters/Search). -> **Deliverable:** Frontend source code.
-* **Task:** Shipping calculation system. -> **Deliverable:** Tested Java API.
-* **Task:** Doc generation pipeline. -> **Deliverable:** GitHub Actions workflow.
+## P.1 – Roles
 
-### P.5 Required Technology Elements
-* Java 17, Maven, Angular CLI, AWS EC2 Instance.
+- **P.1.1** – Fullstack Developer.
+- **P.1.2** – DevOps Engineer.
+- **P.1.3** – Product Owner.
 
-### P.6 Risk and Mitigation Analysis
-* **Risk:** Server downtime. -> **Mitigation:** AWS Load Balancing implementation.
-* **Risk:** Data breach. -> **Mitigation:** SSL encryption and BCrypt hashing.
+## P.2 – Technical Choices
 
-### P.7 Requirements Process and Report
-* **P.7.1:** Project requirements are specified using the PEGS approach.
-* **P.7.1:** Each created tag triggers a new project version in ZIP format and generates a PDF version of the requirements.
-* **P.7.2:** The specification PDF is automatically generated.
+- **P.2.1** – Angular, Java Spring Boot, PostgreSQL.
+- **P.2.2** – Jira, GitHub, AWS.
+
+## P.3 – Planning
+
+- **P.3.1** – Defined milestones and objectives.
+
+## P.4 – Tasks and Deliverables
+
+- **P.4.1** – Catalog module.
+- **P.4.2** – Shipping calculation system.
+- **P.4.3** – Documentation pipeline.
+
+## P.5 – Required Technologies
+
+- **P.5.1** – Java 17, Angular CLI, AWS EC2.
+
+## P.6 – Risks and Mitigation
+
+- **P.6.1** – Downtime → Load balancing.
+- **P.6.2** – Data breach → Encryption and hashing.
+
+## P.7 – Requirements Process
+
+- **P.7.1** – PEGS methodology.
+- **P.7.2** – Automated versioning and PDF generation.
