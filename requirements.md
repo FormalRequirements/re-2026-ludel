@@ -15,22 +15,33 @@ toc-title: "Table des matières"
 
 ## P.2 – Technical Choices
 
-- **P.2.1** – Angular, Java Spring Boot, PostgreSQL.
-- **P.2.2** – Jira, GitHub, AWS.
+- **P2.1 – Frontend Stacks**: Development must use AngularJS.
+- **P2.2 – Backend Stacks**: Development must use Java Spring Boot.
+- **P2.3 – Database**: Centralized storage using PostgreSQL.
+- **P2.4 – Management Tools**: Jira for ticketing and project tracking.
+- **P2.5 – Version Control**: GitHub for code hosting and versioning.
+- **P2.6 – Infrastructure**: Cloud hosting provided by AWS (Amazon Web Services).
 
-## P.3 – Planning
+## P.3 – Schedule, Milestones, and Key Objectives
 
-- **P.3.1** – Defined milestones and objectives.
+| Date (D+) | Mission | Phase | Key Objective |
+| :--- | :--- | :--- | :--- |
+| **D+7** | M1: Design | UI/UX Mockups | Validation of the graphic charter and checkout funnel. |
+| **D+10** | M2: Catalog | Backend Dev | SQL Database import and functional search API. |
+| **D+14** | M3: Checkout | Security | Payment gateway integration and "Sandbox" testing. |
+| **D+25** | M4: CI/CD | Cloud Deployment | Production Go-Live on AWS with GitHub Actions. |
 
 ## P.4 – Tasks and Deliverables
 
-- **P.4.1** – Catalog module.
-- **P.4.2** – Shipping calculation system.
-- **P.4.3** – Documentation pipeline.
+- **P4.1 – Catalog Module**: Development of filters and search functionality. **Deliverable**: Frontend source code.
+- **P4.2 – Shipping System**: Development of the delivery cost calculation logic. **Deliverable**: Tested Java API.
+- **P4.3 – Doc Pipeline**: Implementation of the requirements generation workflow. **Deliverable**: GitHub Actions `.yml` workflow.
 
 ## P.5 – Required Technologies
 
-- **P.5.1** – Java 17, Angular CLI, AWS EC2.
+- **P5.1 – Runtimes**: Java 17 and Maven for backend builds.
+- **P5.2 – CLI**: Angular CLI for frontend management.
+- **P5.3 – Compute**: AWS EC2 Instance for application hosting.
 
 ## P.6 – Risks and Mitigation
 
@@ -40,7 +51,12 @@ toc-title: "Table des matières"
 ## P.7 – Requirements Process
 
 - **P.7.1** – PEGS methodology.
-- **P.7.2** – Automated versioning and PDF generation.
+- **P.7.2** – using Elisa.
+- **P.7.3** – A Continuous Integration (CI) pipeline is configured via GitHub Actions to trigger automatically on every push or pull request to the main branch.
+- **P.7.4** – The system utilizes the Pandoc tool to automatically convert the requirements.md source file into professional PDF and HTML formats.
+- **P.7.5** – The generation process automatically includes a table of contents (--toc) and hierarchical section numbering (--number-sections) to ensure consistency with the Meyer Standard Plan.
+- **P.7.6** – Upon completion of each workflow run, the generated files (requirements-E-store.pdf and .html) are archived as downloadable artifacts on GitHub, ensuring the most up-to-date version is always available for stakeholders.
+
 
 ---
 
@@ -147,12 +163,13 @@ toc-title: "Table des matières"
 
 ## G.1 – Context
 
-- **G.1.1** – Design an online sports equipment sales platform.
+- **G1.1** – The E-store project aims to design a robust software solution for online sports equipment sales.
+- **G1.2** – The primary objective is to capture a market of demanding athletes by offering a platform capable of supporting high traffic and heavy loads.
 
 ## G.2 – Current Situation
 
-- **G.2.1** – Customers rely on physical stores.
-- **G.2.2** – No specialized centralized online platform.
+- **G2.1** – Currently, customers are required to visit physical stores to purchase specialized sports equipment.
+- **G2.2** – There is a significant lack of centralized online platforms offering technical sports gear with reliable real-time inventory tracking.
 
 ## G.3 – Expected Benefits
 
@@ -163,35 +180,36 @@ toc-title: "Table des matières"
 
 ## G.4 – Functional Overview
 
-- **G.4.1** – Navigation by sports discipline.
-- **G.4.2** – Advanced search and filtering.
-- **G.4.3** – Cart management.
-- **G.4.4** – Secure checkout.
-- **G.4.5** – Profile and order history management.
+- **G4.1 – Navigation**: Allow users to browse products categorized by sports discipline (Bodybuilding, Fitness, Football, etc.).
+- **G4.2 – Advanced Search**: Provide a search engine with filters for weight, brand, and size.
+- **G4.3 – Cart Management**: Enable users to add, modify, or remove items in a cart, including a guest mode for non-authenticated users.
+- **G4.4 – Secure Checkout**: Implement a secure funnel where registration or login is mandatory for final payment.
+- **G4.5 – Profile & History**: Allow registered users to manage their profiles and track their order history.
 
 ## G.5 – Usage Scenarios
 
-- **G.5.1** – Targeted purchase.
-- **G.5.2** – Account update.
-- **G.5.3** – Product comparison.
-- **G.5.4** – Sales monitoring by administrator.
+- **G5.1 – Achat ciblé** : Un utilisateur recherche "Haltères 10kg", filtre par marque et finalise l'achat immédiatement.
+- **G5.2 – Gestion de compte** : Un client met à jour son adresse de livraison dans son profil suite à un déménagement.
+- **G5.3 – Consultation de produit** : Un utilisateur compare les spécifications techniques de deux tapis de course différents avant de se décider.
+- **G5.4 – Suivi Administrateur** : Le directeur du magasin (PO) consulte les statistiques de ventes hebdomadaires via le tableau de bord d'administration.
 
 ## G.6 – Limitations
 
-- **G.6.1** – No second-hand products.
-- **G.6.2** – Limited delivery area.
-- **G.6.3** – No video coaching (V1).
-- **G.6.4** – Restricted payment methods.
-- **G.6.5** – Manual product returns.
+- **G6.1** – The platform does not support the sale of second-hand or used products.
+- **G6.2** – Delivery services are strictly restricted to Mainland France and Belgium.
+- **G6.3** – Integrated video coaching programs are excluded from this version (V1).
+- **G6.4** – Payments via check or cryptocurrency are not supported.
+- **G6.5** – Product returns are handled manually via Customer Support and are not automated in the UI.
+
 
 ## G.7 – Stakeholders
 
-- **G.7.1** – Customers.
-- **G.7.2** – Product Owner.
-- **G.7.3** – Development team.
-- **G.7.4** – DevOps.
-- **G.7.5** – Payment provider.
-- **G.7.6** – GDPR authority.
+- **G7.1 – Customers**: Amateur and professional athletes (Source for usability and performance requirements).
+- **G7.2 – Product Owner**: Store Manager (Source for profitability and business rules).
+- **G7.3 – Fullstack**: Developer responsible for Java/Angular technical constraints.
+- **G7.4 – DevOps**: Engineer responsible for deployment and CI/CD requirements.
+- **G7.5 – Payment Provider**: External entity setting banking security constraints.
+ - **G7.6 – GDPR**: Regulatory framework for legal constraints regarding data privacy.
 
 ---
 
