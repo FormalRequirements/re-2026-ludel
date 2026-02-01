@@ -1,17 +1,3 @@
-name: CI
-
-on:
-  push:
-    branches: ["main"]
-    tags:
-      - "v*"
-  pull_request:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,6 +6,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      - name: Check PEGS major sections
+        run: python3 script-check.py
+
+      # (optionnel) debug
       - name: List repo files (debug)
         run: ls -la
 
@@ -42,6 +40,9 @@ jobs:
         run: |
           pandoc requirements.md \
             --toc \
+            --toc-depth=3 \
+            --standalone \
+            --css styles/requirements.css \
             -o requirements-E-store.html
 
       - name: Upload generated files as artifacts
