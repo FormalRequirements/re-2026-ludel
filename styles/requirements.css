@@ -38,6 +38,7 @@ h4 {
 h1 {
   font-size: 2rem;
   margin-top: 0.6em;
+  text-align: center;
 }
 h2 {
   font-size: 1.5rem;
@@ -108,25 +109,70 @@ th {
   text-align: left;
 }
 
+/* Professional Table of Contents */
 #TOC {
   border: 1px solid var(--border);
-  background: #fafafa;
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin: 1em 0 1.5em 0;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 1.2em 0 1.8em 0;
 }
-#TOC > ul {
-  margin: 0;
-  padding-left: 1.2em;
-}
-#TOC li {
-  margin: 0.2em 0;
-}
-#TOC a {
+
+#TOC::before {
+  content: "Table des matières";
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
   color: var(--fg);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
 }
+
+#TOC ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+#TOC li {
+  margin: 0;
+  padding: 2px 0;
+}
+
+/* Link styling */
+#TOC a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: var(--fg);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
 #TOC a:hover {
+  background: #f6f7f8;
   color: var(--link);
+}
+
+#TOC a:focus {
+  outline: 2px solid rgba(11, 87, 208, 0.25);
+  outline-offset: 2px;
+}
+
+#TOC ul ul a {
+  padding-left: 22px;
+  font-size: 0.95em;
+  color: var(--muted);
+}
+#TOC ul ul ul a {
+  padding-left: 34px;
+  font-size: 0.92em;
+}
+
+#TOC ul ul li {
+  padding: 1px 0;
 }
 
 hr {
