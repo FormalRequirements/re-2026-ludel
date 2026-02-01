@@ -1,3 +1,42 @@
+# Project Book – E-Store
+
+## P.1 – Roles
+
+- **P.1.1** – Fullstack Developer.
+- **P.1.2** – DevOps Engineer.
+- **P.1.3** – Product Owner.
+
+## P.2 – Technical Choices
+
+- **P.2.1** – Angular, Java Spring Boot, PostgreSQL.
+- **P.2.2** – Jira, GitHub, AWS.
+
+## P.3 – Planning
+
+- **P.3.1** – Defined milestones and objectives.
+
+## P.4 – Tasks and Deliverables
+
+- **P.4.1** – Catalog module.
+- **P.4.2** – Shipping calculation system.
+- **P.4.3** – Documentation pipeline.
+
+## P.5 – Required Technologies
+
+- **P.5.1** – Java 17, Angular CLI, AWS EC2.
+
+## P.6 – Risks and Mitigation
+
+- **P.6.1** – Downtime mitigated by load balancing.
+- **P.6.2** – Data breach mitigated by encryption and hashing.
+
+## P.7 – Requirements Process
+
+- **P.7.1** – PEGS methodology.
+- **P.7.2** – Automated versioning and PDF generation.
+
+---
+
 # Environment Book – E-Store
 
 ## E.1 – Glossary
@@ -146,45 +185,6 @@
 - **G.7.4** – DevOps.
 - **G.7.5** – Payment provider.
 - **G.7.6** – GDPR authority.
-
----
-
-# Project Book – E-Store
-
-## P.1 – Roles
-
-- **P.1.1** – Fullstack Developer.
-- **P.1.2** – DevOps Engineer.
-- **P.1.3** – Product Owner.
-
-## P.2 – Technical Choices
-
-- **P.2.1** – Angular, Java Spring Boot, PostgreSQL.
-- **P.2.2** – Jira, GitHub, AWS.
-
-## P.3 – Planning
-
-- **P.3.1** – Defined milestones and objectives.
-
-## P.4 – Tasks and Deliverables
-
-- **P.4.1** – Catalog module.
-- **P.4.2** – Shipping calculation system.
-- **P.4.3** – Documentation pipeline.
-
-## P.5 – Required Technologies
-
-- **P.5.1** – Java 17, Angular CLI, AWS EC2.
-
-## P.6 – Risks and Mitigation
-
-- **P.6.1** – Downtime mitigated by load balancing.
-- **P.6.2** – Data breach mitigated by encryption and hashing.
-
-## P.7 – Requirements Process
-
-- **P.7.1** – PEGS methodology.
-- **P.7.2** – Automated versioning and PDF generation.
 
 ---
 
