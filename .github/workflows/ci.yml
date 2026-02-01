@@ -1,3 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -5,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: List repo files (debug)
+        run: ls -la
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -16,10 +35,6 @@ jobs:
 
       - name: Check PEGS major sections
         run: python3 script-check.py
-
-      # (optionnel) debug
-      - name: List repo files (debug)
-        run: ls -la
 
       - name: Install Pandoc and LaTeX
         run: |
@@ -52,6 +67,7 @@ jobs:
           path: |
             requirements-E-store.pdf
             requirements-E-store.html
+            styles/requirements.css
 
       - name: Upload files to GitHub Release (tags only)
         if: startsWith(github.ref, 'refs/tags/v')
@@ -60,3 +76,4 @@ jobs:
           files: |
             requirements-E-store.pdf
             requirements-E-store.html
+            styles/requirements.css
