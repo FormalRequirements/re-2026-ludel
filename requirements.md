@@ -140,82 +140,167 @@
 
 **E7.1** – Deleting a customer account results in the deletion or anonymization of personal data, except for information retained for legal purposes (invoices and sales history).
 
-### G.1 Overall Context
-The E-store project aims to design a robust software solution for online sports equipment sales. The goal is to capture a market of demanding athletes by offering a platform capable of supporting high traffic and heavy loads.
-
-### G.2 Current Situation
-Currently, customers must visit physical stores. There is a lack of centralized online platforms for specialized sports equipment with reliable real-time inventory tracking.
-
-### G.3 Expected Benefits
-* **Inventory Range:** Showcase over 500 technical product references.
-* **Concurrency:** Support hundreds of simultaneous orders.
-* **Automation:** Reduce human errors in order entry.
-* **Speed:** Instant payment processing and notifications.
-
-### G.4 Functionality Overview
-The system shall ensure a seamless user experience through:
-* Navigation by sports discipline (Bodybuilding, Fitness, Football, etc.).
-* Advanced search (weight, brand, size).
-* Cart management (Add/Edit/Remove) including guest mode.
-* Secure checkout funnel (Registration/Login mandatory for payment).
-* Profile management and order history tracking.
 
 
+# Goals Book – E‑Store
 
-### G.5 High-level Usage Scenarios
-* **G.5.1 Targeted Purchase:** A user searches for "10kg Dumbbells", filters by brand, and completes the purchase immediately.
-* **G.5.2 Account Management:** A customer updates their shipping address following a relocation.
-* **G.5.3 Product Consultation:** A user compares the technical specifications of two treadmills.
-* **G.5.4 Admin Tracking:** The Director (PO) reviews weekly sales statistics.
+## G.1 – Overall Context
 
-### G.6 Limitations and Exclusions
-* **G.6.1:** No second-hand or used product sales.
-* **G.6.2:** Delivery is restricted to Mainland France and Belgium only.
-* **G.6.3:** No integrated video coaching programs (V1).
-* **G.6.4:** No payments via check or cryptocurrency.
-* **G.6.5:** Product returns are not handled automatically via the UI (Manual Customer Support).
+**G1.1** – The E-store project aims to design a robust software solution for online sports equipment sales.
 
-### G.7 Stakeholders and Requirements Sources
-* **G.7.1 Customers:** Amateur and pro athletes (Usability requirements).
-* **G.7.2 Product Owner:** Store Manager (Profitability requirements).
-* **G.7.3 Luce (Fullstack):** Source of Java/Angular technical constraints.
-* **G.7.4 Abdel (DevOps):** Source of deployment and CI/CD requirements.
-* **G.7.5 Payment Provider:** Source of banking security constraints.
-* **G.7.6 GDPR:** Source of legal constraints regarding data privacy.
+**G1.2** – The primary objective is to capture a market of demanding athletes by offering a platform capable of supporting high traffic and heavy loads.
 
+---
 
-### P.1 Roles and Personnel
-* **Luce:** Angular (Frontend) and Java Spring Boot (Backend) development.
-* **Abdel:** AWS Architecture, CI/CD Pipeline, and Validation Testing.
-* **Product Owner:** Store Director (Deliverable validation).
+## G.2 – Current Situation
 
-### P.2 Imposed Technical Choices
-* **Stacks:** Angular (Frontend), Java (Backend), PostgreSQL (Database).
-* **Professional Tools:** Jira (Ticketing), GitHub (Code), AWS (Cloud).
+**G2.1** – Currently, customers are required to visit physical stores to purchase specialized sports equipment.
 
+**G2.2** – There is a significant lack of centralized online platforms offering technical sports gear with reliable real-time inventory tracking.
 
-### P.3 Schedule, Milestones, and Key Objectives
+---
+
+## G.3 – Expected Benefits
+
+**G3.1 – Inventory Range**: Showcase a catalog of over 500 technical product references.
+
+**G3.2 – Concurrency**: Support hundreds of simultaneous orders without performance degradation.
+
+**G3.3 – Automation**: Reduce human errors in order entry and processing.
+
+**G3.4 – Speed**: Ensure instant payment processing and immediate automated notifications.
+
+---
+
+## G.4 – Functionality Overview
+
+**G4.1 – Navigation**: Allow users to browse products categorized by sports discipline (Bodybuilding, Fitness, Football, etc.).
+
+**G4.2 – Advanced Search**: Provide a search engine with filters for weight, brand, and size.
+
+**G4.3 – Cart Management**: Enable users to add, modify, or remove items in a cart, including a guest mode for non-authenticated users.
+
+**G4.4 – Secure Checkout**: Implement a secure funnel where registration or login is mandatory for final payment.
+
+**G4.5 – Profile & History**: Allow registered users to manage their profiles and track their order history.
+
+---
+
+## G.5 – High-level Usage Scenarios
+
+**G5.1 – Targeted Purchase**: A user searches for "10kg Dumbbells", filters by brand, and completes the purchase immediately.
+
+**G5.2 – Account Management**: A customer updates their shipping address in their profile following a relocation.
+
+**G5.3 – Product Consultation**: A user compares the technical specifications of two different treadmills before deciding.
+
+**G5.4 – Admin Tracking**: The Store Director (PO) reviews weekly sales statistics via the administration dashboard.
+
+---
+
+## G.6 – Limitations and Exclusions
+
+**G6.1** – The platform does not support the sale of second-hand or used products.
+
+**G6.2** – Delivery services are strictly restricted to Mainland France and Belgium.
+
+**G6.3** – Integrated video coaching programs are excluded from this version (V1).
+
+**G6.4** – Payments via check or cryptocurrency are not supported.
+
+**G6.5** – Product returns are handled manually via Customer Support and are not automated in the UI.
+
+---
+
+## G.7 – Stakeholders and Requirements Sources
+
+**G7.1 – Customers**: Amateur and professional athletes (Source for usability and performance requirements).
+
+**G7.2 – Product Owner**: Store Manager (Source for profitability and business rules).
+
+**G7.3 – Luce (Fullstack)**: Developer responsible for Java/Angular technical constraints.
+
+**G7.4 – Abdel (DevOps)**: Engineer responsible for deployment and CI/CD requirements.
+
+**G7.5 – Payment Provider**: External entity setting banking security constraints.
+
+**G7.6 – GDPR**: Regulatory framework for legal constraints regarding data privacy.
+
+---
+---
+
+# Project Book – E‑Store
+
+## P.1 – Roles and Personnel
+
+**P1.1 – Luce**: Lead developer in charge of Angular (Frontend) and Java Spring Boot (Backend) development.
+
+**P1.2 – Abdel**: DevOps engineer in charge of AWS Architecture, CI/CD Pipeline, and Validation Testing.
+
+**P1.3 – Product Owner**: Store Director responsible for business requirements and deliverable validation.
+
+---
+
+## P.2 – Imposed Technical Choices
+
+**P2.1 – Frontend Stacks**: Development must use AngularJS.
+
+**P2.2 – Backend Stacks**: Development must use Java Spring Boot.
+
+**P2.3 – Database**: Centralized storage using PostgreSQL.
+
+**P2.4 – Management Tools**: Jira for ticketing and project tracking.
+
+**P2.5 – Version Control**: GitHub for code hosting and versioning.
+
+**P2.6 – Infrastructure**: Cloud hosting provided by AWS (Amazon Web Services).
+
+---
+
+## P.3 – Schedule, Milestones, and Key Objectives
+
 | Date (D+) | Mission | Phase | Key Objective |
 | :--- | :--- | :--- | :--- |
 | **D+7** | M1: Design | UI/UX Mockups | Validation of the graphic charter and checkout funnel. |
-| **D+10** | M2: Catalog | Backend Development | SQL Database import and functional search API. |
-| **D+14** | M3: Checkout | Payment & Security | Payment gateway integration and "Sandbox" testing. |
-| **D+25** | M4: CI/CD | Cloud Deployment | Production Go-Live on AWS with GitHub Actions pipeline. |
+| **D+10** | M2: Catalog | Backend Dev | SQL Database import and functional search API. |
+| **D+14** | M3: Checkout | Security | Payment gateway integration and "Sandbox" testing. |
+| **D+25** | M4: CI/CD | Cloud Deployment | Production Go-Live on AWS with GitHub Actions. |
 
+---
 
-### P.4 Tasks and Deliverables
-* **Task:** Catalog Module (Filters/Search). -> **Deliverable:** Frontend source code.
-* **Task:** Shipping calculation system. -> **Deliverable:** Tested Java API.
-* **Task:** Doc generation pipeline. -> **Deliverable:** GitHub Actions workflow.
+## P.4 – Tasks and Deliverables
 
-### P.5 Required Technology Elements
-* Java 17, Maven, Angular CLI, AWS EC2 Instance.
+**P4.1 – Catalog Module**: Development of filters and search functionality. **Deliverable**: Frontend source code.
 
-### P.6 Risk and Mitigation Analysis
-* **Risk:** Server downtime. -> **Mitigation:** AWS Load Balancing implementation.
-* **Risk:** Data breach. -> **Mitigation:** SSL encryption and BCrypt hashing.
+**P4.2 – Shipping System**: Development of the delivery cost calculation logic. **Deliverable**: Tested Java API.
 
-### P.7 Requirements Process and Report
-* **P.7.1:** Project requirements are specified using the PEGS approach.
-* **P.7.1:** Each created tag triggers a new project version in ZIP format and generates a PDF version of the requirements.
-* **P.7.2:** The specification PDF is automatically generated.
+**P4.3 – Doc Pipeline**: Implementation of the requirements generation workflow. **Deliverable**: GitHub Actions `.yml` workflow.
+
+---
+
+## P.5 – Required Technology Elements
+
+**P5.1 – Runtimes**: Java 17 and Maven for backend builds.
+
+**P5.2 – CLI**: Angular CLI for frontend management.
+
+**P5.3 – Compute**: AWS EC2 Instance for application hosting.
+
+---
+
+## P.6 – Risk and Mitigation Analysis
+
+**P6.1 – Server Downtime**: Risk of service interruption. **Mitigation**: Implementation of AWS Load Balancing.
+
+**P6.2 – Data Breach**: Risk of unauthorized access to sensitive data. **Mitigation**: Systematic SSL encryption and BCrypt password hashing.
+
+---
+
+## P.7 – Requirements Process and Report
+
+**P7.1 – Methodology**: Project requirements are specified and maintained using the PEGS approach.
+
+**P7.2 – Versioning**: Every Git "tag" triggers a new project version in ZIP format and generates a PDF version of the requirements.
+
+**P7.3 – Automation**: The requirements specification PDF is automatically generated at each push via the CI/CD pipeline.
+
