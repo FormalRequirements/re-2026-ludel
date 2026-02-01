@@ -1,15 +1,11 @@
 # Environment Book – E-Store
 
----
-
 ## E.1 – Glossary
 
 ### E.1.1 Actors
 
 - **E.1.1.1 – Client**: A person who owns a customer account on the e-store and is able to browse products and make online purchases.
 - **E.1.1.2 – Administrator**: A person responsible for managing the e-store, including product catalog, stock levels, orders, and system configuration.
-
----
 
 ### E.1.2 Business Objects (Products and Documents)
 
@@ -18,8 +14,6 @@
 - **E.1.2.3 – Order**: A set of products selected by a client with the intention of purchasing.
 - **E.1.2.4 – Invoice**: An electronic document summarizing the details of a completed sale.
 
----
-
 ### E.1.3 Business Processes
 
 - **E.1.3.1 – Sale**: Commercial process corresponding to order validation and successful payment.
@@ -27,16 +21,12 @@
 - **E.1.3.3 – Delivery**: Process by which ordered products are delivered to a location chosen by the client.
 - **E.1.3.4 – Order cancellation**: Action allowing the client to remove all or part of the products from an order before final validation.
 
----
-
 ### E.1.4 System Elements
 
 - **E.1.4.1 – E-store**: A virtual store allowing the online sale of goods or services via the Internet.
 - **E.1.4.2 – Customer account**: A personal system space allowing a client to authenticate, place orders, and consult order and invoice history.
 - **E.1.4.3 – Login**: The action allowing a client to access their customer account using identifiers.
 - **E.1.4.4 – Authentication**: The system process of verifying the client’s identity during login.
-
----
 
 ## E.2 – Components
 
@@ -46,8 +36,6 @@
 - **E.2.1.2 – Application server**: Component hosting backend code and handling user requests.
 - **E.2.1.3 – Database**: Centralized storage system for clients, products, orders, and invoices.
 
----
-
 ### E.2.2 External Components
 
 - **E.2.2.1 – External payment service**: Third-party system responsible for validating and securing transactions.
@@ -55,8 +43,6 @@
 - **E.2.2.3 – SMS service**: External system used to send payment validation codes.
 - **E.2.2.4 – Web browser**: Software used by the client to access the e-store.
 - **E.2.2.5 – Internet network**: Infrastructure enabling communication between all systems.
-
----
 
 ## E.3 – Constraints
 
@@ -67,14 +53,10 @@
 - **E.3.1.3** – Out-of-stock products must be clearly indicated to the user.
 - **E.3.1.4** – Each invoice must be accessible in the customer’s personal space.
 
----
-
 ### E.3.2 Security Constraints
 
 - **E.3.2.1** – Customer passwords must follow defined complexity rules.
 - **E.3.2.2** – Any payment validation must be confirmed using a confidential code sent to the customer’s phone number.
-
----
 
 ### E.3.3 Notification Constraints
 
@@ -83,14 +65,10 @@
 - **E.3.3.3** – An error message must be displayed in case of failure.
 - **E.3.3.4** – Any site unavailability must be notified by email.
 
----
-
 ### E.3.4 Technical Constraints
 
 - **E.3.4.1** – The user interface must be developed using Angular.
 - **E.3.4.2** – The backend must be developed using Spring Boot.
-
----
 
 ## E.4 – Assumptions
 
@@ -100,8 +78,6 @@
 - **E.4.4** – Customers use a compatible web browser.
 - **E.4.5** – Users comply with e-store usage rules.
 
----
-
 ## E.5 – Effects on the Environment
 
 - **E.5.1** – Creation, modification, and deletion of customer data.
@@ -109,8 +85,6 @@
 - **E.5.3** – Generation and storage of electronic invoices.
 - **E.5.4** – Sending notifications to customers.
 - **E.5.5** – Impact on commercial management processes.
-
----
 
 ## E.6 – Invariants
 
@@ -212,9 +186,9 @@
 - **P.7.1** – PEGS methodology.
 - **P.7.2** – Automated versioning and PDF generation.
 
-# System Book – E-Store
-
 ---
+
+# System Book – E-Store
 
 ## S.1 – Components
 
@@ -249,8 +223,6 @@ Module responsible for generating, storing and providing access to electronic in
 ### S1.8 – Database
 
 Persistent SQL database ensuring data integrity, consistency and transactional safety for customer, product, order, payment and invoice data.
-
----
 
 ## S.2 – Functionality
 
@@ -298,8 +270,6 @@ Persistent SQL database ensuring data integrity, consistency and transactional s
 - The system shall make invoices accessible in the customer’s personal space.
 - The system shall prevent modification of issued invoices.
 
----
-
 ## S.3 – Interfaces
 
 ### S3.1 – User Interface
@@ -317,8 +287,6 @@ Interfaces used to send email and SMS notifications to customers.
 ### S3.4 – Administration Interface
 
 Interface allowing administrators to manage products, stock levels, orders and invoices, and to monitor system activity.
-
----
 
 ## S.4 – Detailed Usage Scenarios
 
@@ -346,8 +314,6 @@ If payment validation fails, the system marks the order as unpaid and notifies t
 
 If stock becomes unavailable during order validation, the system prevents confirmation and informs the customer.
 
----
-
 ## S.5 – Prioritization
 
 - **Critical** – Required for production release  
@@ -361,8 +327,6 @@ If stock becomes unavailable during order validation, the system prevents confir
 
 - **Low** – Optional enhancements  
   Interface customization
-
----
 
 ## S.6 – Verification and Acceptance Criteria
 
