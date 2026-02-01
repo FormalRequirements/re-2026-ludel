@@ -2,26 +2,26 @@
 
 ## E.1 – Glossary
 
-### E.1.1 Actors
+### E.1.1 – Actors
 
 - **E.1.1.1 – Client**: A person who owns a customer account on the e-store and is able to browse products and make online purchases.
 - **E.1.1.2 – Administrator**: A person responsible for managing the e-store, including product catalog, stock levels, orders, and system configuration.
 
-### E.1.2 Business Objects (Products and Documents)
+### E.1.2 – Business Objects (Products and Documents)
 
 - **E.1.2.1 – Product**: A generic item offered for sale on the e-store.
 - **E.1.2.2 – Sports equipment**: A specific type of product intended for practicing or assisting a sports activity.
 - **E.1.2.3 – Order**: A set of products selected by a client with the intention of purchasing.
 - **E.1.2.4 – Invoice**: An electronic document summarizing the details of a completed sale.
 
-### E.1.3 Business Processes
+### E.1.3 – Business Processes
 
 - **E.1.3.1 – Sale**: Commercial process corresponding to order validation and successful payment.
 - **E.1.3.2 – Payment**: Process allowing the client to pay for an order using secure payment methods.
 - **E.1.3.3 – Delivery**: Process by which ordered products are delivered to a location chosen by the client.
 - **E.1.3.4 – Order cancellation**: Action allowing the client to remove all or part of the products from an order before final validation.
 
-### E.1.4 System Elements
+### E.1.4 – System Elements
 
 - **E.1.4.1 – E-store**: A virtual store allowing the online sale of goods or services via the Internet.
 - **E.1.4.2 – Customer account**: A personal system space allowing a client to authenticate, place orders, and consult order and invoice history.
@@ -30,13 +30,13 @@
 
 ## E.2 – Components
 
-### E.2.1 Internal Components
+### E.2.1 – Internal Components
 
 - **E.2.1.1 – User Interface (UI)**: Graphical interface allowing the client to interact with the e-store.
 - **E.2.1.2 – Application server**: Component hosting backend code and handling user requests.
 - **E.2.1.3 – Database**: Centralized storage system for clients, products, orders, and invoices.
 
-### E.2.2 External Components
+### E.2.2 – External Components
 
 - **E.2.2.1 – External payment service**: Third-party system responsible for validating and securing transactions.
 - **E.2.2.2 – Email service**: External system used to send confirmation and notification emails.
@@ -46,26 +46,26 @@
 
 ## E.3 – Constraints
 
-### E.3.1 Functional Constraints
+### E.3.1 – Functional Constraints
 
 - **E.3.1.1** – Order payment can only be performed after a customer account has been created.
 - **E.3.1.2** – A customer account must be created using a valid email address, a password, and a phone number.
 - **E.3.1.3** – Out-of-stock products must be clearly indicated to the user.
 - **E.3.1.4** – Each invoice must be accessible in the customer’s personal space.
 
-### E.3.2 Security Constraints
+### E.3.2 – Security Constraints
 
 - **E.3.2.1** – Customer passwords must follow defined complexity rules.
 - **E.3.2.2** – Any payment validation must be confirmed using a confidential code sent to the customer’s phone number.
 
-### E.3.3 Notification Constraints
+### E.3.3 – Notification Constraints
 
 - **E.3.3.1** – A confirmation message must be displayed after account creation.
 - **E.3.3.2** – A confirmation email must be sent after account creation.
 - **E.3.3.3** – An error message must be displayed in case of failure.
 - **E.3.3.4** – Any site unavailability must be notified by email.
 
-### E.3.4 Technical Constraints
+### E.3.4 – Technical Constraints
 
 - **E.3.4.1** – The user interface must be developed using Angular.
 - **E.3.4.2** – The backend must be developed using Spring Boot.
@@ -128,7 +128,7 @@
 - **G.5.1** – Targeted purchase.
 - **G.5.2** – Account update.
 - **G.5.3** – Product comparison.
-- **G.5.4** – Sales monitoring by admin.
+- **G.5.4** – Sales monitoring by administrator.
 
 ## G.6 – Limitations
 
@@ -178,8 +178,8 @@
 
 ## P.6 – Risks and Mitigation
 
-- **P.6.1** – Downtime → Load balancing.
-- **P.6.2** – Data breach → Encryption and hashing.
+- **P.6.1** – Downtime mitigated by load balancing.
+- **P.6.2** – Data breach mitigated by encryption and hashing.
 
 ## P.7 – Requirements Process
 
@@ -192,35 +192,35 @@
 
 ## S.1 – Components
 
-### S1.1 – Frontend Web
+### S.1.1 – Frontend Web
 
 Web user interface allowing customers to browse products, manage their account, place orders and perform payments through a web browser.
 
-### S1.2 – Backend Application
+### S.1.2 – Backend Application
 
 Central application layer implementing the business logic of the e-store and coordinating interactions between internal modules, the database and external services.
 
-### S1.3 – Authentication Module
+### S.1.3 – Authentication Module
 
 Module responsible for user authentication, credential verification, session management and access control.
 
-### S1.4 – Order Management Module
+### S.1.4 – Order Management Module
 
 Module responsible for creating, updating, validating and cancelling customer orders.
 
-### S1.5 – Payment Management Module
+### S.1.5 – Payment Management Module
 
 Module responsible for initiating payment requests, validating payments and handling payment failures through interaction with external payment services.
 
-### S1.6 – Inventory Management Module
+### S.1.6 – Inventory Management Module
 
 Module responsible for managing product stock levels and determining product availability.
 
-### S1.7 – Invoicing Module
+### S.1.7 – Invoicing Module
 
 Module responsible for generating, storing and providing access to electronic invoices.
 
-### S1.8 – Database
+### S.1.8 – Database
 
 Persistent SQL database ensuring data integrity, consistency and transactional safety for customer, product, order, payment and invoice data.
 
@@ -272,45 +272,45 @@ Persistent SQL database ensuring data integrity, consistency and transactional s
 
 ## S.3 – Interfaces
 
-### S3.1 – User Interface
+### S.3.1 – User Interface
 
 Web interface allowing customers to interact with the e-store.
 
-### S3.2 – Payment Interface
+### S.3.2 – Payment Interface
 
 Interface used to communicate with external payment services for payment initiation and validation.
 
-### S3.3 – Notification Interfaces
+### S.3.3 – Notification Interfaces
 
 Interfaces used to send email and SMS notifications to customers.
 
-### S3.4 – Administration Interface
+### S.3.4 – Administration Interface
 
 Interface allowing administrators to manage products, stock levels, orders and invoices, and to monitor system activity.
 
 ## S.4 – Detailed Usage Scenarios
 
-### S4.1 – Create a customer account
+### S.4.1 – Create a customer account
 
 A user enters personal information. The system validates the data and creates a customer account.
 
-### S4.2 – Place an order
+### S.4.2 – Place an order
 
 A customer selects products. The system checks availability and creates an order.
 
-### S4.3 – Pay an order
+### S.4.3 – Pay an order
 
 The customer initiates payment. The system validates the confirmation code and confirms the order.
 
-### S4.4 – Cancel an order
+### S.4.4 – Cancel an order
 
 The customer cancels an unpaid order. The system updates stock levels accordingly.
 
-### S4.5 – Payment failure
+### S.4.5 – Payment failure
 
 If payment validation fails, the system marks the order as unpaid and notifies the customer.
 
-### S4.6 – Stock unavailable during validation
+### S.4.6 – Stock unavailable during validation
 
 If stock becomes unavailable during order validation, the system prevents confirmation and informs the customer.
 
@@ -330,10 +330,10 @@ If stock becomes unavailable during order validation, the system prevents confir
 
 ## S.6 – Verification and Acceptance Criteria
 
-- **S6.1** – A customer can create an account and authenticate successfully.
-- **S6.2** – An authenticated customer can create, validate and pay for an order.
-- **S6.3** – Any payment attempt without a valid confirmation code is rejected.
-- **S6.4** – Stock levels are updated after each order validation or cancellation.
-- **S6.5** – An invoice is generated and accessible after successful payment.
-- **S6.6** – The system prevents access to customer data by unauthorized users.
-- **S6.7** – The system rejects invalid authentication attempts within an acceptable response time.
+- **S.6.1** – A customer can create an account and authenticate successfully.
+- **S.6.2** – An authenticated customer can create, validate and pay for an order.
+- **S.6.3** – Any payment attempt without a valid confirmation code is rejected.
+- **S.6.4** – Stock levels are updated after each order validation or cancellation.
+- **S.6.5** – An invoice is generated and accessible after successful payment.
+- **S.6.6** – The system prevents access to customer data by unauthorized users.
+- **S.6.7** – The system rejects invalid authentication attempts within an acceptable response time.
