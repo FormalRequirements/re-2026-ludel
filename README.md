@@ -70,6 +70,11 @@ This workflow allows:
 - **Pandoc**  
   Used to convert Markdown documents into structured PDF and HTML deliverables.
 
+### Test
+
+- **Python**  
+  A Python script is used to verify that all required sections of the requirements document are present.
+
 ---
 
 ## Automation
@@ -96,10 +101,11 @@ To support the quality and consistency of the work, **Large Language Models (LLM
 
 These tools were used exclusively for:
 
-- requirement clarification
-- consistency checking
-- assistance in script writing for validation tests
-- methodological guidance
+- clarification and refinement of requirements
+- improvement of structure and presentation
+- consistency checking across documents
+- assistance in writing and structuring validation scripts
+- methodological guidance during the requirements engineering process
 
 All design decisions and final content remain under human control.
 
