@@ -44,7 +44,7 @@ To ensure a clean and collaborative development process, the repository follows 
 - **`feat2/branche-requirement`**  
   Dedicated to the writing and refinement of the requirements documents (Environment Book, Goals Book, Project Book, and System Book).
 
-- **Documentation branch**  
+- **`feat1/implementation-README`**  
   Used for updates and improvements to the `README.md` file and project documentation.
 
 This workflow allows:
