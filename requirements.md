@@ -228,47 +228,47 @@ Persistent SQL database ensuring data integrity, consistency and transactional s
 
 ### S.2.1 – Frontend Web
 
-- The system shall display the product catalog with availability information.
-- The system shall allow customers to create an account and authenticate.
-- The system shall allow customers to create orders and initiate payments.
-- The system shall allow customers to consult order history and invoices.
+- **S.2.1.1** - The system shall display the product catalog with availability information.
+- **S.2.1.2** - The system shall allow customers to create an account and authenticate.
+- **S.2.1.3** - The system shall allow customers to create orders and initiate payments.
+- **S.2.1.4** - The system shall allow customers to consult order history and invoices.
 
 ### S.2.2 – Authentication Module
 
-- The system shall verify customer credentials during login.
-- The system shall create and manage authenticated user sessions.
-- The system shall reject invalid authentication attempts.
-- The system shall deny access to protected resources for unauthenticated users.
+- **S.2.2.1** - The system shall verify customer credentials during login.
+- **S.2.2.2** - The system shall create and manage authenticated user sessions.
+- **S.2.2.3** - The system shall reject invalid authentication attempts.
+- **S.2.2.4** - The system shall deny access to protected resources for unauthenticated users.
 
 ### S.2.3 – Order Management Module
 
-- The system shall create an order for an authenticated customer.
-- The system shall allow products to be added to or removed from an order.
-- The system shall validate an order only if all products are available.
-- The system shall allow an order to be cancelled before payment validation.
-- The system shall mark an order as confirmed only after successful payment.
+- **S.2.3.1** - The system shall create an order for an authenticated customer.
+- **S.2.3.2** - The system shall allow products to be added to or removed from an order.
+- **S.2.3.3** - The system shall validate an order only if all products are available.
+- **S.2.3.4** - The system shall allow an order to be cancelled before payment validation.
+- **S.2.3.5** - The system shall mark an order as confirmed only after successful payment.
 
 ### S.2.4 – Payment Management Module
 
-- The system shall initiate a payment request for a validated order.
-- The system shall require a confirmation code to validate a payment.
-- The system shall reject any payment attempt without a valid confirmation code.
-- The system shall handle payment failures by marking the order as unpaid.
-- The system shall notify the customer in case of payment failure.
+- **S.2.4.1** - The system shall initiate a payment request for a validated order.
+- **S.2.4.2** - The system shall require a confirmation code to validate a payment.
+- **S.2.4.3** - The system shall reject any payment attempt without a valid confirmation code.
+- **S.2.4.4** - The system shall handle payment failures by marking the order as unpaid.
+- **S.2.4.5** - The system shall notify the customer in case of payment failure.
 
 ### S.2.5 – Inventory Management Module
 
-- The system shall check product availability before order validation.
-- The system shall decrease stock levels after successful order validation.
-- The system shall restore stock levels after order cancellation.
-- The system shall prevent stock levels from becoming negative.
+- **S.2.5.1** - The system shall check product availability before order validation.
+- **S.2.5.2** - The system shall decrease stock levels after successful order validation.
+- **S.2.5.3** - The system shall restore stock levels after order cancellation.
+- **S.2.5.4** - The system shall prevent stock levels from becoming negative.
 
 ### S.2.6 – Invoicing Module
 
-- The system shall generate an invoice after successful payment.
-- The system shall store the invoice in the database.
-- The system shall make invoices accessible in the customer’s personal space.
-- The system shall prevent modification of issued invoices.
+- **S.2.6.1** - The system shall generate an invoice after successful payment.
+- **S.2.6.2** - The system shall store the invoice in the database.
+- **S.2.6.3** - The system shall make invoices accessible in the customer’s personal space.
+- **S.2.6.4** - The system shall prevent modification of issued invoices.
 
 ## S.3 – Interfaces
 
@@ -316,16 +316,16 @@ If stock becomes unavailable during order validation, the system prevents confir
 
 ## S.5 – Prioritization
 
-- **Critical** – Required for production release  
+- **S.5.1 - Critical** – Required for production release  
   Authentication, order validation, payment processing
 
-- **High** – Required for normal commercial operation  
+- **S.5.2 - High** – Required for normal commercial operation  
   Inventory management, invoicing, administration interface
 
-- **Medium** – Improves user experience  
+- **S.5.3 - Medium** – Improves user experience  
   Order history consultation
 
-- **Low** – Optional enhancements  
+- **S.5.4 - Low** – Optional enhancements  
   Interface customization
 
 ## S.6 – Verification and Acceptance Criteria
