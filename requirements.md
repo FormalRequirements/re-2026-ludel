@@ -1,3 +1,10 @@
+---
+title: "PEGS Requirements – E-Store"
+subtitle: "Sports Equipment Online Store"
+date: "2026-02-01"
+toc-title: "Table des matières"
+---
+
 # Project Book – E-Store
 
 ## P.1 – Roles
