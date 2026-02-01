@@ -56,7 +56,8 @@ jobs:
           pandoc requirements.md \
             --toc \
             --toc-depth=3 \
-            --css styles/requirements.css \
+            --standalone \
+            --include-in-header styles/header.html \
             -o requirements-E-store.html
 
       - name: Upload generated files as artifacts
@@ -66,7 +67,6 @@ jobs:
           path: |
             requirements-E-store.pdf
             requirements-E-store.html
-            styles/requirements.css
 
       - name: Upload files to GitHub Release (tags only)
         if: startsWith(github.ref, 'refs/tags/v')
@@ -75,4 +75,3 @@ jobs:
           files: |
             requirements-E-store.pdf
             requirements-E-store.html
-            styles/requirements.css
