@@ -211,3 +211,165 @@
 
 - **P.7.1** – PEGS methodology.
 - **P.7.2** – Automated versioning and PDF generation.
+
+# System Book – E-Store
+
+---
+
+## S.1 – Components
+
+### S1.1 – Frontend Web
+
+Web user interface allowing customers to browse products, manage their account, place orders and perform payments through a web browser.
+
+### S1.2 – Backend Application
+
+Central application layer implementing the business logic of the e-store and coordinating interactions between internal modules, the database and external services.
+
+### S1.3 – Authentication Module
+
+Module responsible for user authentication, credential verification, session management and access control.
+
+### S1.4 – Order Management Module
+
+Module responsible for creating, updating, validating and cancelling customer orders.
+
+### S1.5 – Payment Management Module
+
+Module responsible for initiating payment requests, validating payments and handling payment failures through interaction with external payment services.
+
+### S1.6 – Inventory Management Module
+
+Module responsible for managing product stock levels and determining product availability.
+
+### S1.7 – Invoicing Module
+
+Module responsible for generating, storing and providing access to electronic invoices.
+
+### S1.8 – Database
+
+Persistent SQL database ensuring data integrity, consistency and transactional safety for customer, product, order, payment and invoice data.
+
+---
+
+## S.2 – Functionality
+
+### S.2.1 – Frontend Web
+
+- The system shall display the product catalog with availability information.
+- The system shall allow customers to create an account and authenticate.
+- The system shall allow customers to create orders and initiate payments.
+- The system shall allow customers to consult order history and invoices.
+
+### S.2.2 – Authentication Module
+
+- The system shall verify customer credentials during login.
+- The system shall create and manage authenticated user sessions.
+- The system shall reject invalid authentication attempts.
+- The system shall deny access to protected resources for unauthenticated users.
+
+### S.2.3 – Order Management Module
+
+- The system shall create an order for an authenticated customer.
+- The system shall allow products to be added to or removed from an order.
+- The system shall validate an order only if all products are available.
+- The system shall allow an order to be cancelled before payment validation.
+- The system shall mark an order as confirmed only after successful payment.
+
+### S.2.4 – Payment Management Module
+
+- The system shall initiate a payment request for a validated order.
+- The system shall require a confirmation code to validate a payment.
+- The system shall reject any payment attempt without a valid confirmation code.
+- The system shall handle payment failures by marking the order as unpaid.
+- The system shall notify the customer in case of payment failure.
+
+### S.2.5 – Inventory Management Module
+
+- The system shall check product availability before order validation.
+- The system shall decrease stock levels after successful order validation.
+- The system shall restore stock levels after order cancellation.
+- The system shall prevent stock levels from becoming negative.
+
+### S.2.6 – Invoicing Module
+
+- The system shall generate an invoice after successful payment.
+- The system shall store the invoice in the database.
+- The system shall make invoices accessible in the customer’s personal space.
+- The system shall prevent modification of issued invoices.
+
+---
+
+## S.3 – Interfaces
+
+### S3.1 – User Interface
+
+Web interface allowing customers to interact with the e-store.
+
+### S3.2 – Payment Interface
+
+Interface used to communicate with external payment services for payment initiation and validation.
+
+### S3.3 – Notification Interfaces
+
+Interfaces used to send email and SMS notifications to customers.
+
+### S3.4 – Administration Interface
+
+Interface allowing administrators to manage products, stock levels, orders and invoices, and to monitor system activity.
+
+---
+
+## S.4 – Detailed Usage Scenarios
+
+### S4.1 – Create a customer account
+
+A user enters personal information. The system validates the data and creates a customer account.
+
+### S4.2 – Place an order
+
+A customer selects products. The system checks availability and creates an order.
+
+### S4.3 – Pay an order
+
+The customer initiates payment. The system validates the confirmation code and confirms the order.
+
+### S4.4 – Cancel an order
+
+The customer cancels an unpaid order. The system updates stock levels accordingly.
+
+### S4.5 – Payment failure
+
+If payment validation fails, the system marks the order as unpaid and notifies the customer.
+
+### S4.6 – Stock unavailable during validation
+
+If stock becomes unavailable during order validation, the system prevents confirmation and informs the customer.
+
+---
+
+## S.5 – Prioritization
+
+- **Critical** – Required for production release  
+  Authentication, order validation, payment processing
+
+- **High** – Required for normal commercial operation  
+  Inventory management, invoicing, administration interface
+
+- **Medium** – Improves user experience  
+  Order history consultation
+
+- **Low** – Optional enhancements  
+  Interface customization
+
+---
+
+## S.6 – Verification and Acceptance Criteria
+
+- **S6.1** – A customer can create an account and authenticate successfully.
+- **S6.2** – An authenticated customer can create, validate and pay for an order.
+- **S6.3** – Any payment attempt without a valid confirmation code is rejected.
+- **S6.4** – Stock levels are updated after each order validation or cancellation.
+- **S6.5** – An invoice is generated and accessible after successful payment.
+- **S6.6** – The system prevents access to customer data by unauthorized users.
+- **S6.7** – The system rejects invalid authentication attempts within an acceptable response time.
