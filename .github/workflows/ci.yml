@@ -56,7 +56,6 @@ jobs:
           pandoc requirements.md \
             --toc \
             --toc-depth=3 \
-            --standalone \
             --css styles/requirements.css \
             -o requirements-E-store.html
 
